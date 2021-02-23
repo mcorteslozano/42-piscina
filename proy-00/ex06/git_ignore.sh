@@ -1,1 +1,1 @@
-git check-ignore *
+cat .gitignore
