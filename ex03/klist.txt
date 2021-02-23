@@ -1,0 +1,5 @@
+Credentials cache: API:5440
+        Principal: mcortes-@42MADRID.COM
+
+  Issued                Expires               Principal
+Feb 22 18:27:41 2021  Feb 23 04:27:38 2021  krbtgt/42MADRID.COM@42MADRID.COM
