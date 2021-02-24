@@ -1,1 +1,1 @@
-cat .gitignore
+git ls-files . --exclude-standard -i -o
