@@ -6,7 +6,7 @@
 /*   By: mcortes- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/27 13:08:33 by mcortes-          #+#    #+#             */
-/*   Updated: 2021/02/27 14:30:05 by mcortes-         ###   ########.fr       */
+/*   Updated: 2021/02/27 16:50:47 by mcortes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void rush(int v1, int v2){
 	char salta = '\n';
 	char espacio = ' ';
 
-	char aux1 = v1; // 5
-	char aux2 = v2; // 3
-	char aux3 = v2; // Auxiliar para conteo de altura
+	char aux1 = v1; // Auxiliar valor1
+	char aux2 = v2; // Auxiliar valor2
+	
 	
 	while(v1 > 0){
 		if(v1 == 1){
@@ -34,7 +34,7 @@ void rush(int v1, int v2){
 		}
 		v1--;
 	}
-	aux3--;
+
 	v1 = aux1;
 	write(1, &salta, 1);
 	
@@ -42,12 +42,13 @@ void rush(int v1, int v2){
 		v1 = aux1;
 		while(v1 > 0){
 			if(v1 == 1){
-				write(1, &escribeB, 1);
+				write(1, &escribeB, 0);
 			} else if(v1 != aux1){
 				write(1, &espacio, 1);
 			} else {
 				write(1, &escribeB, 1);
 			}
+
 			v1--;
 		}
 		v2--;
@@ -71,6 +72,6 @@ void rush(int v1, int v2){
 }
 
 int main(){
-	rush(20,7);
+	rush(15,20);
 }
 
