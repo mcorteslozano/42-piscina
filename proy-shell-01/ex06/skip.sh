@@ -1,1 +1,1 @@
-sed -n '1,2p' skip.sh | ls -l
+ls -l | sed -n 'p;n'

@@ -1,1 +1,1 @@
-ifconfig | grep -Eo ..\(\:..\){5}
+ifconfig -a | grep -ioE '..:..:..:..:..:..'

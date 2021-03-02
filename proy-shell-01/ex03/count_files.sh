@@ -1,1 +1,1 @@
-find . | wc -l
+find . | grep -c .
