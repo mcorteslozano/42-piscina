@@ -6,11 +6,10 @@
 /*   By: mcortes- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/25 19:52:58 by mcortes-          #+#    #+#             */
-/*   Updated: 2021/03/02 18:55:15 by mcortes-         ###   ########.fr       */
+/*   Updated: 2021/03/02 19:32:18 by mcortes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
 
 void	ft_putchar(char n)
@@ -27,14 +26,11 @@ void	ft_special(char a, char b, char c)
 
 void	ft_print_comb(void)
 {
-
 	char a;
 	char b;
 	char c;
 
 	a = '0';
-	b = '0';
-	c = '0';
 	while(a <= '7')
 	{
 		b = a + 1;
@@ -44,13 +40,11 @@ void	ft_print_comb(void)
 			while(c <= '9')
 			{
 				if(a != '7' || b != '8' || c != '9')
-				{
 					ft_special(a, b, c);
 					ft_putchar(',');
 					ft_putchar(' ');
-				} else {
+				else
 					ft_special(a, b, c);
-				}
 				c++;
 			}
 			b++;
@@ -58,9 +52,3 @@ void	ft_print_comb(void)
 		a++;
 	}
 }
-
-int	main(void)
-{
-	ft_print_comb();
-}
-

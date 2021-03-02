@@ -6,12 +6,10 @@
 /*   By: mcortes- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/02 19:05:13 by mcortes-          #+#    #+#             */
-/*   Updated: 2021/03/02 19:05:15 by mcortes-         ###   ########.fr       */
+/*   Updated: 2021/03/02 19:35:06 by mcortes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <unistd.h>
 #include <stdio.h>
 
 char	g_array[9];
@@ -84,9 +82,4 @@ void	ft_update_last(int n)
 		g_array[last_i]++;
 		ft_fill(last_i, n);
 	}
-}
-
-int main()
-{
-ft_print_combn(7);
 }

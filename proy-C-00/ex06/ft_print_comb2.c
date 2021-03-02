@@ -6,11 +6,10 @@
 /*   By: mcortes- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/02 18:52:01 by mcortes-          #+#    #+#             */
-/*   Updated: 2021/03/02 18:52:31 by mcortes-         ###   ########.fr       */
+/*   Updated: 2021/03/02 19:33:34 by mcortes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
 
 void	while_u(char m, char c, char d, char u);
@@ -53,9 +52,4 @@ void	while_u(char m, char c, char d, char u)
 				write(1, ", ", 2);
 		}
 	}
-}
-
-int		main()
-{
-ft_print_comb2();
 }
