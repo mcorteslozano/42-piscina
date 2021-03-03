@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcortes- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 18:07:33 by mcortes-          #+#    #+#             */
-/*   Updated: 2021/03/03 17:40:01 by mcortes-         ###   ########.fr       */
+/*   Created: 2021/03/03 19:59:28 by mcortes-          #+#    #+#             */
+/*   Updated: 2021/03/03 20:42:42 by mcortes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	write(1, &c, 1);
+	int aux;
+	
+	aux = *a;
+	*a = *a / *b;
+	*b = aux % *b;
 }

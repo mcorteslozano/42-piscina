@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcortes- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/25 18:07:33 by mcortes-          #+#    #+#             */
-/*   Updated: 2021/03/03 17:40:01 by mcortes-         ###   ########.fr       */
+/*   Created: 2021/03/03 20:02:32 by mcortes-          #+#    #+#             */
+/*   Updated: 2021/03/03 20:06:22 by mcortes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putstr(char *str)
 {
-	write(1, &c, 1);
+	char size_str;
+
+	size_str = '0';
+	while(string[i] != '\0') 
+	{
+		write(1, string[i], 1);
+		i++;
+	}
 }
