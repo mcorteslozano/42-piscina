@@ -15,14 +15,19 @@
 
 int		ft_strlen(char *str)
 {
-	char i;
-	char length_str[];
-
+	int i;
+	
 	i = 0;
-	length_str[] = *str;
 	while(str[i] != '\0')
 	{
+		//printf("%d", i);
 		i++;
 	}
 	return i;
+}
+
+int main(){
+	char linea[] = "Hello World!";
+	
+	ft_strlen(linea);
 }

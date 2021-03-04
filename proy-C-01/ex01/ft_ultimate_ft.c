@@ -11,9 +11,28 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <unistd.h>
 
-void	ft_ultimate(int *********nbr)
+void	ft_ultimate_ft(int *********nbr)
 {
+	
 	*********nbr = 42;	
+	printf("%d", *********nbr);
+}
+
+int main(){
+	
+	int x = 1;
+
+	int *a, **b, ***c, ****d, *****e, ******f, *******g, ********h;
+	
+	a = &x;
+	b = &a;
+	c = &b;
+	d = &c;
+	e = &d;
+	f = &e;
+	g = &f;
+	h = &g;
+
+	ft_ultimate_ft(&h);
 }

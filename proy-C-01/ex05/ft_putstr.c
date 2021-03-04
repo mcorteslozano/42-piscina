@@ -15,12 +15,18 @@
 
 void	ft_putstr(char *str)
 {
-	char size_str;
+	char i;
 
-	size_str = '0';
-	while(string[i] != '\0') 
+	i = 0;
+	while(str[i] != '\0') 
 	{
-		write(1, string[i], 1);
+		write(1, &str[i], 1);
 		i++;
 	}
+}
+
+int main(){
+	char linea[] = "Hello World!";
+	
+	ft_putstr(linea);
 }

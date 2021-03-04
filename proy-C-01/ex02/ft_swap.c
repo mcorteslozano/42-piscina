@@ -20,4 +20,16 @@ void	ft_swap(int *a, int *b)
 	aux = *a;
 	*a = *b;
 	*b = aux;
+	
+	printf("El valor de A es...: %d", *a);
 }
+
+int main(){
+	int v1;
+	int v2;
+
+	v1 = 2;
+	v2 = 4;
+	ft_swap(&v1, &v2);
+}
+	

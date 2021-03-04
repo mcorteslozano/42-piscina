@@ -20,4 +20,16 @@ void	ft_ultimate_div_mod(int *a, int *b)
 	aux = *a;
 	*a = *a / *b;
 	*b = aux % *b;
+	
+	printf("El resultado de *a es...: %d", *a);
+	printf("\nEl resultado de *b es...: %d", *b);
+}
+
+int main(){
+	int v1;
+	int v2;
+
+	v1 = 6;
+	v2 = 3;
+	ft_ultimate_div_mod(&v1, &v2);
 }
