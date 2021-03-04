@@ -6,7 +6,7 @@
 /*   By: mcortes- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 20:25:48 by mcortes-          #+#    #+#             */
-/*   Updated: 2021/03/03 20:30:01 by mcortes-         ###   ########.fr       */
+/*   Updated: 2021/03/04 18:05:47 by mcortes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ void	ft_sort_int_tab(int *tab, int size)
 	{
 		while(j + 1 < size)
 		{
-			if(*tab[i] > *tab[j])
+			if(tab[i] > tab[j])
 			{
-				temp = *tab[i];
-				*tab[i] = *tab[j];
-				*tab[j] = temp;
+				temp = tab[i];
+				tab[i] = tab[j];
+				tab[j] = temp;
 			}
 		}
 	}

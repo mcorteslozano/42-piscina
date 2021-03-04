@@ -6,7 +6,7 @@
 /*   By: mcortes- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 20:06:55 by mcortes-          #+#    #+#             */
-/*   Updated: 2021/03/03 20:14:29 by mcortes-         ###   ########.fr       */
+/*   Updated: 2021/03/04 18:00:10 by mcortes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int		ft_strlen(char *str)
 
 int main(){
 	char linea[] = "Hello World!";
-	
-	ft_strlen(linea);
+	int total;
+
+	total = ft_strlen(linea);
+	printf("%d", total);
 }
