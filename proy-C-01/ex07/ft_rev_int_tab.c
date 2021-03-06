@@ -6,12 +6,9 @@
 /*   By: mcortes- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 20:14:56 by mcortes-          #+#    #+#             */
-/*   Updated: 2021/03/03 20:41:21 by mcortes-         ###   ########.fr       */
+/*   Updated: 2021/03/04 20:29:28 by mcortes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <unistd.h>
 
 void	ft_rev_int_tab(int *tab, int size)
 {
@@ -20,7 +17,8 @@ void	ft_rev_int_tab(int *tab, int size)
 	int tam;
 
 	tam = size - 1;
-	while(i < (size / 2))
+	i = 0;
+	while (i < size / 2)
 	{
 		aux = tab[i];
 		tab[i] = tab[tam];

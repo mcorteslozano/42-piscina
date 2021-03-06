@@ -6,22 +6,11 @@
 /*   By: mcortes- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 19:27:08 by mcortes-          #+#    #+#             */
-/*   Updated: 2021/03/03 19:50:57 by mcortes-         ###   ########.fr       */
+/*   Updated: 2021/03/04 18:13:41 by mcortes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 void	ft_ft(int *nbr)
 {
 	*nbr = 42;
-	printf("%d", *nbr);
-	
-}
-
-int	main(){
-	int valor;
-
-	ft_ft(&valor);
-	return 0;
 }
