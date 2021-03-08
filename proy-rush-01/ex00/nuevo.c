@@ -6,13 +6,12 @@
 /*   By: smoreira <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 13:27:38 by smoreira          #+#    #+#             */
-/*   Updated: 2021/03/06 16:34:07 by mcortes-         ###   ########.fr       */
+/*   Updated: 2021/03/06 14:40:23 by smoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
-#include <stdlib.h>
 
 void	array(int a, int b, int c, int d/*, int e, int f, int g, int h, int x, int j, int k, int l, int m, int n, int o, int p*/)
 {
@@ -148,20 +147,6 @@ void	array(int a, int b, int c, int d/*, int e, int f, int g, int h, int x, int 
 
 int		main()
 {
-	//int i = 0;
-	//int a, b, c, d;
+	array(1, 4, 3, 2/*, 1, 2, 2, 2, 4, 3, 2, 1, 1, 2, 2, 2*/);
+}
 
-	/*if(argc != 2)
-	{
-		printf("Error de datos\n");
-		exit(1);
-	} else {
-		while(i < 3)
-		{
-			a = argv[i];
-			i++;
-		}
-		array((int)(a), b, c, d);
-		}*/	
-	array(4, 3, 2, 1);	
-}	
