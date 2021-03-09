@@ -6,12 +6,9 @@
 /*   By: mcortes- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 19:30:03 by mcortes-          #+#    #+#             */
-/*   Updated: 2021/03/08 19:30:06 by mcortes-         ###   ########.fr       */
+/*   Updated: 2021/03/09 17:56:44 by mcortes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <unistd.h>
 
 int	ft_str_is_alpha(char *str)
 {
@@ -20,24 +17,15 @@ int	ft_str_is_alpha(char *str)
 
 	i = 0;
 	j = 1;
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
-		if(str[i] >= 'A' && str[i] <= 'Z')
+		if (str[i] >= 'A' && str[i] <= 'Z')
 			j = 1;
-		else if(str[i] >= 'a' && str[i] <= 'z')
+		else if (str[i] >= 'a' && str[i] <= 'z')
 			j = 1;
-		else 
-			return(0);
+		else
+			return (0);
 		i++;
 	}
 	return (j);
-}
-
-int main(void)
-{
-	int pruebas;
-
-	pruebas = ft_str_is_alpha("....!dadasdasd");
-	
-	printf("Resultado: %d\n", pruebas);
 }

@@ -6,11 +6,9 @@
 /*   By: mcortes- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 19:31:18 by mcortes-          #+#    #+#             */
-/*   Updated: 2021/03/08 19:31:19 by mcortes-         ###   ########.fr       */
+/*   Updated: 2021/03/09 17:58:14 by mcortes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_str_is_uppercase(char *str)
 {
@@ -19,22 +17,13 @@ int	ft_str_is_uppercase(char *str)
 
 	i = 0;
 	j = 1;
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
-		if(str[i] >= 'A' && str[i] <= 'Z')
+		if (str[i] >= 'A' && str[i] <= 'Z')
 			j = 1;
 		else
 			return (0);
 		i++;
 	}
 	return (j);
-}
-
-int main(void)
-{
-	int prueba;
-
-	prueba = ft_str_is_uppercase("AAAA__!");
-	
-	printf("Prueba -> %d\n", prueba);
 }

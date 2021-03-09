@@ -6,20 +6,18 @@
 /*   By: mcortes- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 19:31:34 by mcortes-          #+#    #+#             */
-/*   Updated: 2021/03/08 19:31:37 by mcortes-         ###   ########.fr       */
+/*   Updated: 2021/03/09 17:59:10 by mcortes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 char	*ft_strupcase(char *str)
 {
 	int i;
 
 	i = 0;
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
-		if(str[i] >= 'a' && str[i] <= 'z')
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
 			str[i] = str[i] - 32;
 			i++;
