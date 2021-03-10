@@ -10,21 +10,56 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+int		ft_isalpha(char a)
+{
+	if (a >= '0' && a <= '9')
+		return (0);
+	else if (a >= 'A' && a <= 'Z')
+		return (1);
+	else if (a >= 'a' && a <= 'z')
+		return (1);
+	else
+		return (0);
+}
+
+int		ft_is_not_alpha(char a)
+{
+	if (a < '0')
+		return (1);
+	else if (a > '9' && a < 'A')
+		return (1);
+	else if ((a > 'Z' && a < 'a') || (a > 'z'))
+		return (1);
+	return (0);
+}
+
+int		ft_isuppercase(char b)
+{
+	if (b >= 'A' && b <= 'Z')
+		return (1);
+	else
+		return (0);
+}
+
 char	*ft_strcapitalize(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	if (str[i] >= 'a' && str[i] <= 'z')
-		str[i] = str[i] - 32;
 	while (str[i] != '\0')
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
+		if (ft_isuppercase(str[i]))
 		{
-			if (str[i - 1] >= 32 && str[i - 1] <= 47)
-			{
-				str[i] = str[i] - 32;
-			}
+			str[i] = str[i] + 32;
+		}
+		i++;
+	}
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (ft_is_not_alpha(str[i - 1]) && ft_isalpha(str[i]))
+		{
+			str[i] = str[i] - 32;
 		}
 		i++;
 	}

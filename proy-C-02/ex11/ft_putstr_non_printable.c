@@ -11,41 +11,35 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
 void	ft_putchar(char c)
 {
-	write(1, &c, 1);
+		write(1, &c, 1);
 }
 
-void	hex(int x)
+void    ft_putstr_non_printable(char *str)
 {
-	char	*h;
-	int		a;
-	int		b;
+    char    *hexa;
+    unsigned char value;
 
-	h = "0123456789abcdf";
-	a = h[x / 16];
-	b = h[x % 16];
-	ft_putchar('\\');
-	ft_putchar(a);
-	ft_putchar(b);
-}
+    hexa = "0123456789abcdf";
+    while (*str != '\0')
+    {
+        value = (unsigned char)*str;
+        if (value < 32 || value > 126)
+        {
+            ft_putchar('\\');
+            ft_putchar(hexa[value / 16]);
+            ft_putchar(hexa[value % 16]);
+        }
+        else
+            ft_putchar(*str);
+        str++;
+    }
+}	
 
-void	ft_putstr_non_printable(char *str)
+int		main(void)
 {
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] < 32 || str[i] == 127)
-		{
-			hex(str[i]);
-		}
-		else
-		{
-			ft_putchar(str[i]);
-		}
-		i++;
-	}
+	ft_putstr_non_printable("CÑoucou\n\n\ntu va\ts bien ?");
 }

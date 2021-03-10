@@ -10,30 +10,42 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <string.h>
+
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int i;
-	int tam;
+	unsigned int x;
+	unsigned int buffer;
 
-	i = 0;
-	tam = size - 1;
-	if (size > 0)
+	x = 0;
+	buffer = 0;
+	while (src[x] != '\0')
+		x++;
+	buffer = x;
+	x = 0;
+	if (size != 0)
 	{
-		while (tam > 0 && src[i] != '\0')
+		while (x < size)
 		{
-			dest[i] = src[i];
-			tam--;
-			i++;
+			if (x == size - 1)
+				dest[x] = 0;
+			else
+				dest[x] = src[x];
+			x++;
 		}
 	}
-	else
-	{
-		dest[i] = '\0';
-	}
-	i = 0;
-	while (src[i])
-	{
-		i++;
-	}
-	return (i);
+	printf("%s\n", dest);
+	return (buffer);
+}
+
+int		main(void)
+{
+	char dest[10];
+	char src[] = "Ho6yt543trtete";
+	
+	//printf("%lu\n", strlcpy(dest, src, 8)); 
+	printf("src: %s\n", src);
+	printf("longitud de src: %d\n", ft_strlcpy(dest, src, 8));
+	return (0);
 }
