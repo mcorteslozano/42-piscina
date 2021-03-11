@@ -15,20 +15,28 @@
 char *ft_strcat(char *dest, char *src)
 {
     int i;
-    
+    int j;
+
     i = 0;
-    while(src[i] != '\0')
+    j = 0;
+    while(dest[i] != '\0')
     {
-        dest[i] = src[i];
         i++;
     }
+    while(src[j] != '\0')
+    {
+        dest[j] = src[j];
+        i++;
+        j++;
+    }
     dest[i] = '\0';
-    return dest;
+    return (dest);
 }
 
 int main(void)
 {
-    char prueba[10];
+    char prueba[20] = "probando";
+    char prueba1[10] = "ft_strcat";
 
-    printf("%s\n", ft_strcat(prueba, "abc"));
+    printf("%s\n", ft_strcat(prueba, prueba1));
 }

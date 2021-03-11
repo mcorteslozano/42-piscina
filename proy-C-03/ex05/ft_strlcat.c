@@ -25,38 +25,33 @@ unsigned int	ft_strlen(char *str)
 
 unsigned int    ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	int i;
 	unsigned int offset;
-    int dest_len;
-	int src_len;
+    unsigned int dest_len;
+	unsigned int src_len;
 
     dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
 	offset = dest_len;
-	i = 0;
-
-	while (*(src + i) != '\0')
+	if (src_len == 0 && size == 0)
+		return (0);
+	else if(offset > size - 1)
+		return (size);
+	while((*src != '\0') && (offset < size - 1) && (size != 0))
 	{
-		*(dest + offset) = *(src + i);
+		*(dest + offset) = *src;
 		offset++;
-		i++;
-		if (offset == size)
-			break;
+		src++;
 	}
 	*(dest + offset) = '\0';
-    return (dest_len + src_len + 1);
+	return (dest_len + src_len);
 }
 
 int     main(void)
 {
     char dest[10] = "mundo";
-    char src[] = "12323456";
+    char src[] = "123456";
 
-<<<<<<< HEAD
-    printf("longitud función mía: %d\n", ft_strlcat(dest, src, 6));
-	//printf("longitud función original: %lu\n", strlcat(dest, src, 6));
-    return (0);
+    printf("longitud función original: %lu\n", strlcat(dest, src, 8));
+	printf("%s\n", dest);
+	return (0);
 }
-=======
-}
->>>>>>> f584270990a72ec27e8ada879be1679a6f700d2e
