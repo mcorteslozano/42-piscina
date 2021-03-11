@@ -44,5 +44,6 @@ int main(void)
 	char	*string = "Hola mi nombre es Mario";
 	char	*search = "Mario";
 	//printf("%s\n", ft_strstr(string, search));
-	printf("%s\n", strstr(string, search));
+	printf("Probando función propia: %s\n", strstr(string, search));
+    printf("Probando prueba del sistema: %s\n", strstr(string, search));
 }

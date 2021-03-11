@@ -43,7 +43,7 @@ unsigned int    ft_strlcat(char *dest, char *src, unsigned int size)
 		src++;
 	}
 	*(dest + offset) = '\0';
-	return (dest_len + src_len);
+	return ((dest_len + 1) + (src_len + 1));
 }
 
 int     main(void)
@@ -51,7 +51,7 @@ int     main(void)
     char dest[10] = "mundo";
     char src[] = "123456";
 
-    printf("longitud función original: %lu\n", strlcat(dest, src, 8));
-	printf("%s\n", dest);
+    printf("longitud función propia: %d\n", ft_strlcat(dest, src, 8));
+	printf("longitud función sistema: %lu\n", strlcat(dest, src, 8));
 	return (0);
 }

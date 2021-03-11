@@ -23,11 +23,11 @@ char *ft_strncat(char *dest, char *src, unsigned int nb)
     {
         i++;
     }
-    while(j <= nb)
+    while(j < nb && src[j] != '\0')
     {
         dest[i] = src[j];
-        i++;
         j++;
+        i++;
     }
     dest[i] = '\0';
     return (dest);
@@ -35,9 +35,9 @@ char *ft_strncat(char *dest, char *src, unsigned int nb)
 
 int main(void)
 {
-    char destino[] = "Probando... ";
-    char origen[] = "0123456789";
+    char destino[] = "Hola";
+    char origen[] = "1234";
 
-    printf("%s\n", ft_strncat(destino, origen, 2));
+    printf("%s\n", ft_strncat(destino, origen, 3));
 
 }
