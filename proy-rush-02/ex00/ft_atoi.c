@@ -5,16 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcortes- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/15 17:56:30 by mcortes-          #+#    #+#             */
-/*   Updated: 2021/03/15 17:56:33 by mcortes-         ###   ########.fr       */
+/*   Created: 2021/03/14 20:30:20 by mcortes-          #+#    #+#             */
+/*   Updated: 2021/03/14 20:43:09 by mcortes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(char *str)
+#include "ft_lib.h"
+
+long	ft_atoi(char *str)
 {
-	int numero;
-	int negativo;
-	int i;
+	long	numero;
+	int		negativo;
+	int		i;
 
 	numero = 0;
 	negativo = 1;
@@ -35,4 +37,29 @@ int		ft_atoi(char *str)
 		i++;
 	}
 	return (numero * negativo);
+}
+
+long	ft_atoi2(char *t)
+{
+	long	result;
+	int		negative;
+
+	result = 0;
+	negative = 1;
+	while ((*t == ' ') || (*t >= 9 && *t <= 13))
+		t++;
+	while (*t == '-' || *t == '+')
+	{
+		if (*t == '-')
+			negative = -negative;
+		t++;
+	}
+	while (*t >= '0' && *t <= '9')
+	{
+		if (result > 4294967295)
+			return (-1);
+		result = (result * 10) + (*t - '0');
+		t++;
+	}
+	return (result * negative);
 }
