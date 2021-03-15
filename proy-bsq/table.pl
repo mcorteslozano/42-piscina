@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 use warnings;
 use strict;
+
 die "program x y density" unless (scalar(@ARGV) == 3);
 my ($x, $y, $density) = @ARGV;
 
