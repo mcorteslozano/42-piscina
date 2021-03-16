@@ -1,4 +1,14 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mcortes- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/16 17:54:58 by mcortes-          #+#    #+#             */
+/*   Updated: 2021/03/16 17:55:03 by mcortes-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int		ft_fibonacci(int index)
 {
@@ -10,9 +20,4 @@ int		ft_fibonacci(int index)
 		return (1);
 	else
 		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
-}
-
-int		main(void)
-{
-	printf("%d\n", ft_fibonacci(11));
 }
