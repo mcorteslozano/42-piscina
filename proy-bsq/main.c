@@ -14,56 +14,59 @@
 # include <fcntl.h>
 # include <stdlib.h>
 # include <unistd.h>
-#include "ft_lib.h"
 
-int ft_atoi(char *cadena)
+void    ft_getObs(char *mapa_str)
 {
-    int i;
-    char numeros[10];
-    int num;
+    int    mapa_obs[50];
+    int     i;
+
     i = 0;
-    num = 0;
-    while (cadena[i] >= '0' && cadena[i] <= '9')
+    while(mapa_str[i] != '\0')
     {
-        num = num * 10 + cadena[i] - 48;
+        if(mapa_str[i] == 'o')
+        {
+            mapa_obs[i] = i;
+            write(1, &mapa_obs[i], 1);
+        }
         i++;
     }
-    numeros[i] = '\0';
-    return(num);
 }
 
-char    *ft_inicio_fichero(char *file)
+void    ft_getMap(char *mapa_str)
 {
-    unsigned int	first_bytes;
-	unsigned int	map_size;
-	int				fd;
-	char			*map;
+    int     i;
 
-	map = (char *)malloc(65535);
-	first_bytes = 1;
-	fd = open(file, O_RDONLY);
-	while (first_bytes != '\n')
-	{
-		map_size = read(fd, map, first_bytes++);
-	}
-	if (fd == -1)
+    i = 0;
+    while(mapa_str[i] != '\0')
     {
-		printf("Error de apertura\n");
-        return (0);
+        write(1, &mapa_str[i], 1);
+        i++;
     }
-	
-	close(fd);
-	return (map);
 }
 
-int main(int argc, char **argv)
+int    ft_inicio_fichero()
 {
-    char	*mapa;
+    char	textfiles;
+    char    mapa_str[100];
+    int     f;
+    int     cont;
+    int     numbytes;
 
-	if (argc > 1)
-	{
-		mapa = ft_inicio_fichero(argv[1]);
-		printf("%s\n", mapa);
-	}
-	return (0);
+    cont = 0;
+	f = open("mapa", O_RDONLY);
+    while ((numbytes = read(f, &textfiles, 1)) > 0 && textfiles != '\0')
+    {
+        mapa_str[cont] = textfiles;
+        cont++;
+    }
+    close(f);
+
+    ft_getMap(mapa_str);
+    ft_getObs(mapa_str);
+    return (cont);
+}
+
+int main()
+{
+    printf("Número total de bytes: %d", ft_inicio_fichero());
 }
