@@ -1,0 +1,18 @@
+NAME = bsq
+
+FLAGS = -Wall -Werror -Wextra
+
+SRCS = srcs/*.c
+
+all: $(NAME)
+
+$(NAME):
+	gcc $(FLAGS) -o $(NAME) $(SRCS)
+
+clean:
+	rm -f *.o
+
+fclean:
+	rm -f $(NAME)
+
+re: fclean all
